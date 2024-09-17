@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General container styling */
+.app-container {
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background-color: #f4f4f9;
+  padding-left: 5%;
+  position: relative;
+  /* Ensure child elements can be positioned absolutely */
+}
+
+/* Authentication button container styling */
+.auth-container {
+  position: absolute;
+  top: 8%;
+  right: 4%;
+}
+
+/* Authentication button styling */
+.auth-button {
+  padding: 25px 50px;
+  /* Increase padding for a larger button */
+  background-color: #ff6f61;
+  /* Strava orange */
   color: white;
+  border: none;
+  border-radius: 8px;
+  /* Increase border-radius for a more rounded button */
+  font-size: 18px;
+  /* Increase font size for better readability */
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.auth-button:hover {
+  background-color: #e64a19;
+  /* Slightly darker orange on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* Header styling */
+.app-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Form container styling */
+.form-container {
+  width: 100%;
+  max-width: 65%;
+  margin-top: 60px;
+  /* Adjust margin to make space for the header and button */
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px;
+  padding-right: 5%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input prompt styling */
+.input-prompt {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 150px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Response container styling */
+.response-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 95%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .app-container {
+    padding-left: 2%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form {
+    padding-right: 2%;
   }
 }
